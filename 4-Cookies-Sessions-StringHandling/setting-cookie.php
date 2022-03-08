@@ -3,7 +3,6 @@
 $cookie_name = "user";
 $cookie_value = "Kiranpal";
 setcookie($cookie_name, $cookie_value, time() + (60 * 60), "/");
-setcookie("username", "Kiranpal Singh", time() + (60 * 60), "/");
 ?>
 <html>
 
