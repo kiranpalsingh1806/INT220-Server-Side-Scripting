@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,17 +13,12 @@ session_start();
 
 <body>
     <?php
+    session_unset();
+    session_destroy();
     if (isset($_POST["submit"])) {
-        echo "Welcome to our site !!! <br>";
-        $full_name = $_POST["fullname"];
-
-        $_SESSION["username"]  = $full_name;
-        echo "Your session is set :) <br> ";
+        echo "Your session is unset and destroyed!!! <br>";
     }
     ?>
-    <form action="destroy-page.php" method="post">
-        <input type="submit" value="Destroy Session" name="submit">
-    </form>
 </body>
 
 </html>

@@ -13,18 +13,16 @@
     abstract class Mobile
     {
         public $brand;
-
         public function __construct($name)
         {
             $this->brand = $name;
         }
-
-        abstract public function brandDetails(): string;
+        abstract public function brandDetails();
     }
 
     class Nokia extends Mobile
     {
-        public function brandDetails(): string
+        public function brandDetails()
         {
             return "Thankyou for choosing Finland company. It is $this->brand <br> ---- <br>";
         }
@@ -32,9 +30,17 @@
 
     class BlackBerry extends Mobile
     {
-        public function brandDetails(): string
+        public function brandDetails()
         {
             return "We are a Canada Company. It is $this->brand<br> ---- <br>";
+        }
+    }
+
+    class Micromax  extends Mobile
+    {
+        public function brandDetails()
+        {
+            return "We are an Indian Company. It is $this->brand<br> ---- <br>";
         }
     }
 
@@ -44,6 +50,8 @@
     echo $nokia5233->brandDetails();
     $blackberry9700 = new BlackBerry("Blackberry 9700");
     echo $blackberry9700->brandDetails();
+    $micromax11 = new Micromax("Micromax 11");
+    echo $micromax11->brandDetails();
     ?>
 </body>
 
