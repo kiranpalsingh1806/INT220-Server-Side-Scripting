@@ -13,25 +13,29 @@
     abstract class Mobile
     {
         public $brand;
-        abstract public function brandDetails($brand);
-        abstract public function countryOfOrigin($country);
+        public function __construct($name)
+        {
+            $this->brand = $name;
+        }
+        abstract public function brandDetails();
+        abstract public function countryOfOrigin();
     }
 
     class Nokia extends Mobile
     {
-        public function brandDetails($brand)
+        public function brandDetails()
         {
             echo " It is $this->brand <br> ";
         }
-        public function countryOfOrigin($country)
+        public function countryOfOrigin()
         {
-            return "Country of Origin :  $this->country <br> ----- <br>";
+            return "Country of Origin :  Finland<br> ----- <br>";
         }
     }
 
     class BlackBerry extends Mobile
     {
-        public function brandDetails($brand)
+        public function brandDetails()
         {
             echo "It is $this->brand<br>";
         }
@@ -43,7 +47,7 @@
 
     class Micromax  extends Mobile
     {
-        public function brandDetails($brand)
+        public function brandDetails()
         {
             echo "It is $this->brand<br>";
         }
@@ -53,9 +57,9 @@
         }
     }
 
-    $nokia1100 = new Nokia();
-    echo $nokia1100->brandDetails("Nokia 1100");
-    echo $nokia1100->countryOfOrigin("Finland");
+    $nokia1100 = new Nokia("Nokia 1100");
+    echo $nokia1100->brandDetails();
+    echo $nokia1100->countryOfOrigin();
     $nokia5233 = new Nokia("Nokia 5233");
     echo $nokia5233->brandDetails();
     echo $nokia5233->countryOfOrigin();
