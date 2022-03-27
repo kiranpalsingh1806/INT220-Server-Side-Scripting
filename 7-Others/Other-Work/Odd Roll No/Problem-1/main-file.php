@@ -10,13 +10,7 @@
 
 <body>
     <?php
-    class ContinuousAssessment
-    {
-        public $maxCA = 30;
-        public $ca1 = 27;
-        public $ca2 = 28;
-    }
-
+    include 'class-file.php';
     class FinalExam extends ContinuousAssessment
     {
         public $finalPaper, $maxFinal = 100;
