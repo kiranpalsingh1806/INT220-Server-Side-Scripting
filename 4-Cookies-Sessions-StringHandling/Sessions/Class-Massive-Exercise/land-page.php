@@ -4,7 +4,7 @@
 session_start();
 ?>
 <?php
-$cookie_name = "user";
+$cookie_name = "username";
 $cookie_value = $_POST["fullname"];
 setcookie($cookie_name, $cookie_value, time() + (60 * 60), "/");
 ?>
